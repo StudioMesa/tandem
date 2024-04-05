@@ -1,0 +1,40 @@
+name: Compile LESS to CSS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Check out the repository
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install LESS
+        run: npm install -g less
+
+      - name: Compile LESS to CSS
+        run: lessc styles.less styles.css
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add styles.css
+          git diff --staged --quiet || git commit -m "Compile LESS to CSS"
+          if [ $? -eq 0 ]; then
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/StudioMesa/tandem.git HEAD:main
+          else
+            echo "No changes to commit."
+          fi
