@@ -187,8 +187,6 @@ transition:var(--trans)!important;}
 
 /*Folder Item*/
 .header-nav-folder-item a{
--webkit-animation: .4s ease 0s normal forwards 1 flexload;
-animation: .4s ease 0s normal forwards 1 flexload;
 line-height:1!important;
 width:fit-content!important;
 display:flex;
@@ -205,6 +203,11 @@ transition:var(--trans)!important;}
 &:hover{
 &:before{
 background-color:var(--accent);}}}}
+
+/*Folder Loading*/
+.header-nav-item.header-nav-item--folder{
+-webkit-animation: .4s ease 0s normal forwards 1 flexload;
+animation: .4s ease 0s normal forwards 1 flexload;}
 
 /*Flex Load Animation*/
 @keyframes flexload{
