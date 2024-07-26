@@ -117,8 +117,6 @@ html {
     /*Button*/
   }
   body:not(.sqs-seven-one.sqs-edit-mode-active) .header-actions-action .sqs-button-element--primary {
-    border: var(--b-border) !important;
-    font-size: 14px!important;
     display: flex;
     align-items: center;
     justify-content: center;
