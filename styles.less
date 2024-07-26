@@ -187,6 +187,8 @@ transition:var(--trans)!important;}
 
 /*Folder Item*/
 .header-nav-folder-item a{
+-webkit-animation: .4s ease 0s normal forwards 1 flexload;
+animation: .4s ease 0s normal forwards 1 flexload;
 line-height:1!important;
 width:fit-content!important;
 display:flex;
@@ -203,6 +205,23 @@ transition:var(--trans)!important;}
 &:hover{
 &:before{
 background-color:var(--accent);}}}}
+
+/*Flex Load Animation*/
+@keyframes flexload{
+0%{
+transform:translateY(30px);
+opacity:0;}
+100%{
+transform:translateY(0px);
+opacity:1;}}
+@-webkit-keyframes flexload{
+0%{
+transform:translateY(20px);
+opacity:0;}
+100%{
+transform:translateY(0px);
+opacity:1;}}
+  
 }
 //---END CORE LAYOUT---//
   
