@@ -740,7 +740,7 @@ var(--inter-features);}
 
 /*Field Text / Focus Adjustment*/
 .sqs-block-form{
-input, select, textarea, radio, checkbox, .caption-text, ::placeholder{
+input, select, textarea, radio, checkbox, .caption-text{
 font-family: var(--inter), var(--body), sans-serif!important;
 font-feature-settings:
 var(--inter-features);
@@ -748,7 +748,11 @@ transition:var(--trans)!important;
 outline-offset: 3px!important;
 outline:1px solid transparent;
 &:focus{
-outline:1px solid var(--tweak-form-block-stroke-color);}}}
+outline:1px solid var(--tweak-form-block-stroke-color);}}
+::placeholder{
+font-family: var(--inter), var(--body), sans-serif!important;
+font-feature-settings:
+var(--inter-features);}}
 
 /*Replace "reqired" with "*" */
 .form-wrapper .field-list .description.required{
