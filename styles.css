@@ -1,4 +1,4 @@
-/* Tandem CSS — Updated 7/25/24 */
+/* Tandem CSS — Updated 8/10/24 */
 /*Borders*/
 html {
   --c-border: 1px solid currentColor;
@@ -774,7 +774,8 @@ section[data-current-context*='"typeName": "blog-single-column"'] .blog-single-c
 .sqs-block-form textarea,
 .sqs-block-form radio,
 .sqs-block-form checkbox,
-.sqs-block-form .caption-text {
+.sqs-block-form .caption-text,
+.sqs-block-form ::placeholder {
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
   transition: var(--trans) !important;
@@ -786,8 +787,9 @@ section[data-current-context*='"typeName": "blog-single-column"'] .blog-single-c
 .sqs-block-form textarea:focus,
 .sqs-block-form radio:focus,
 .sqs-block-form checkbox:focus,
-.sqs-block-form .caption-text:focus {
-  outline: 1px solid var(--accent);
+.sqs-block-form .caption-text:focus,
+.sqs-block-form ::placeholder:focus {
+  outline: 1px solid var(--tweak-form-block-stroke-color);
 }
 /*Replace "reqired" with "*" */
 .form-wrapper .field-list .description.required {
