@@ -776,7 +776,6 @@ button[type="submit"]:after,
 }
 /*Only applies to "Narrow"*/
 .tweak-blog-item-width-narrow {
-  /*Remove Default Padding*/
   /*Blog Post Max Width*/
   /*Blog H1*/
   /*Blog H2*/
@@ -807,9 +806,6 @@ button[type="submit"]:after,
   /*Social Links*/
   /*Button Link*/
   /*Link Button Styling*/
-}
-.tweak-blog-item-width-narrow article {
-  padding: 0!important;
 }
 @media screen and (min-width: 767px) {
   .tweak-blog-item-width-narrow .blog-item-wrapper .blog-item-inner-wrapper {
