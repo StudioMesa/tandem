@@ -226,7 +226,6 @@ button[type="submit"]:after,
 .join-button:after,
 .course-item__next-lesson-button:after,
 .lightbox-handle:after {
-  display: flex!important;
   content: "→";
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
