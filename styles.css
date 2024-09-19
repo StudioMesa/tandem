@@ -1,4 +1,4 @@
-/* Tandem CSS — Updated 09/05/24 */
+/* Tandem CSS — Updated 09/18/24 */
 /*Borders*/
 html {
   --c-border: 1px solid currentColor;
@@ -162,37 +162,72 @@ h3 a strong {
     padding-left: 6px;
   }
 }
+/*Mobile Nav Wraper*/
+.header-menu-nav-wrapper {
+  position: static!important;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-nav-gap);
+}
+/*Match main nav to folder*/
+.header-menu-nav-folder-content {
+  display: flex!important;
+  flex-direction: column!important;
+  gap: var(--mobile-nav-gap);
+  padding: var(--sqs-mobile-site-gutter);
+}
+/*Mobile Nav Content*/
+.header-menu-nav-folder-content {
+  position: relative!important;
+  justify-content: center!important;
+}
 /*Mobile Nav Menu Item*/
+.header-menu-nav-item {
+  padding: unset;
+  width: fit-content !important;
+}
 .header-menu-nav-item a {
-  font-size: 28px!important;
-  letter-spacing: -0.01em;
+  width: fit-content !important;
 }
-:is([aria-current="page"], [aria-current="true"]) .header-menu-nav-item-content {
-  background-image: none;
-  background-size: unset;
+/*Add Margin to "Back" Mobile*/
+.header-menu-controls-control--active {
+  margin-bottom: 20px!important;
 }
-/*Mobile Header Icons*/
-.header-actions {
-  flex: 0 0 50px!important;
+/*Mobile Nav Item*/
+.header-menu-nav-item a {
+  font-weight: var(--mobile-nav-weight) !important;
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
+  font-size: var(--mobile-nav-size);
+  letter-spacing: -0.015em;
+  margin: 0px;
 }
-/*Cart Icon*/
-.icon--cart {
-  padding: 3px;
+/*Mobile Menu Button*/
+.header-menu-cta a {
+  font-weight: var(--body-weight) !important;
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
+  font-size: 1rem!important;
+  padding: 14px!important;
+  border: 1px solid var(--menuOverlayButtonBackgroundColor) !important;
 }
-/*Burger Menu Icon*/
-.burger-box {
-  height: 25px;
-  width: 25px;
+.tweak-global-animations-animation-type-flex .header-menu-cta a:before {
+  border: none!important;
+  border-radius: unset!important;
 }
-.top-bun,
-.patty,
-.bottom-bun {
-  border-radius: 100px!important;
+/*Mobile Nav Chevron*/
+.chevron {
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  height: 8px!important;
+  width: 8px!important;
 }
-.header--menu-open .header .header-burger .top-bun,
-.header--menu-open .header .header-burger .patty,
-.header--menu-open .header .header-burger .bottom-bun {
-  width: 25px!important;
+.chevron.chevron--right {
+  margin-left: 4px;
+}
+.chevron.chevron--left {
+  margin-right: 4px;
+  margin-left: -6px;
 }
 /*Core Button Structure*/
 .sqs-block-button-element--small,
@@ -543,7 +578,7 @@ button[type="submit"]:after,
   /*List Summary Small*/
 }
 .summary-block-setting-design-list .summary-item {
-  border-bottom: 1px solid var(--tweak-summary-block-stroke-color);
+  border-bottom: 1px solid var(--secondary-color);
   width: 100%!important;
 }
 .summary-block-setting-design-list .sqs-gallery-design-list {
@@ -616,7 +651,12 @@ button[type="submit"]:after,
   text-transform: uppercase;
   text-align: right;
   opacity: 1!important;
-  font-weight: 500;
+  font-weight: var(--bold-weight);
+}
+@media screen and (max-width: 767px) {
+  .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item {
+    font-size: 0.55em !important;
+  }
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--cats,
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item.summary-metadata-item--date,
@@ -629,7 +669,6 @@ button[type="submit"]:after,
   text-transform: uppercase!important;
   font-style: normal;
   letter-spacing: 0.07em !important;
-  font-size: 8px!important;
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--tags {
   color: var(--dark) !important;
@@ -671,11 +710,9 @@ button[type="submit"]:after,
 }
 /*Inset Sections Mobile + Tab*/
 .tweak-blog-basic-grid-width-inset .blog-basic-grid,
-.blog-single-column,
 .tweak-portfolio-grid-basic-height-custom .portfolio-grid-basic,
 .tweak-products-width-inset .products.collection-content-wrapper,
 .tweak-events-stacked-height-medium .events {
-  max-width: 1200px;
   padding-left: 0!important;
   padding-right: 0!important;
   margin: 0 auto!important;
@@ -683,7 +720,6 @@ button[type="submit"]:after,
 /*Inset Sections Mobile + Tab*/
 @media screen and (max-width: 1250px) {
   .tweak-blog-basic-grid-width-inset .blog-basic-grid,
-  .blog-single-column,
   .tweak-portfolio-grid-basic-height-custom .portfolio-grid-basic,
   .tweak-products-width-inset .products.collection-content-wrapper,
   .tweak-events-stacked-height-medium .events {
@@ -693,9 +729,8 @@ button[type="submit"]:after,
   }
 }
 /*Inset Sections Mobile + Tab*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .tweak-blog-basic-grid-width-inset .blog-basic-grid,
-  .blog-single-column,
   .tweak-portfolio-grid-basic-height-custom .portfolio-grid-basic,
   .tweak-products-width-inset .products.collection-content-wrapper,
   .tweak-events-stacked-height-medium .events {
