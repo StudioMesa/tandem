@@ -1091,7 +1091,7 @@ body:not(.sqs-seven-one.sqs-edit-mode-active) {
   body:not(.sqs-seven-one.sqs-edit-mode-active) main .sections:first-child .page-section:first-child {
     padding-top: 0px!important;
   }
-  body:not(.sqs-seven-one.sqs-edit-mode-active) header {
+  body:not(.sqs-seven-one.sqs-edit-mode-active) #header {
     position: fixed!important;
     width: var(--header-width-desktop) !important;
     min-width: var(--header-width-desktop) !important;
@@ -1245,7 +1245,7 @@ body:not(.sqs-seven-one.sqs-edit-mode-active) {
   }
 }
 @media screen and (min-width: 800px) and screen and (max-width: 1000px) {
-  body:not(.sqs-seven-one.sqs-edit-mode-active) header {
+  body:not(.sqs-seven-one.sqs-edit-mode-active) #header {
     width: var(--header-width-tablet);
   }
 }
