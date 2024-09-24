@@ -611,16 +611,11 @@ body .sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
   /*Summary Container HOVER*/
 }
 .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title {
-  line-height: 0!important;
+  line-height: 1.5 !important;
   width: fit-content !important;
   text-align: left!important;
   padding-bottom: 0!important;
   margin-bottom: 0!important;
-}
-@media screen and (max-width: 767px) {
-  .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title {
-    line-height: 1.5em !important;
-  }
 }
 .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a {
   width: 100%!important;
