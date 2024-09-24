@@ -573,10 +573,14 @@ button[type="submit"]:after,
     text-align: center!important;
   }
 }
+/*Super remove bottom margin*/
+body .sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
+  margin-bottom: unset!important;
+}
 /*Summary Block*/
-.summary-block-setting-design-list {
-  -webkit-animation: 0.4s ease 0s normal forwards 1 flexload !important;
-  animation: 0.4s ease 0s normal forwards 1 flexload !important;
+.sqs-block-summary-v2 .summary-block-setting-design-list {
+  -webkit-animation: 0.8s ease 0s normal forwards 1 flexload !important;
+  animation: 0.8s ease 0s normal forwards 1 flexload !important;
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
   max-width: var(--blog-width) !important;
@@ -585,13 +589,14 @@ button[type="submit"]:after,
   /*Remove Block Padding*/
   /*List Summary Small*/
 }
-.summary-block-setting-design-list .summary-item {
+.sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
+  margin-bottom: unset!important;
+  padding: 18px 0px!important;
   border-bottom: 1px solid var(--secondary-color);
   width: 100%!important;
 }
-.summary-block-setting-design-list .sqs-gallery-design-list {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list {
   width: 100%!important;
-  /*Summary Item - Remove Margin*/
   /*Summary Title*/
   /*Summary Title Link*/
   /*Summary Title Arrow*/
@@ -605,56 +610,56 @@ button[type="submit"]:after,
   /*Summary Text*/
   /*Summary Container HOVER*/
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-item,
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-title {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title {
+  line-height: 0!important;
+  width: fit-content !important;
+  text-align: left!important;
   padding-bottom: 0!important;
   margin-bottom: 0!important;
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-title {
-  width: 100%!important;
-  text-align: left!important;
+@media screen and (max-width: 767px) {
+  .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title {
+    line-height: 1.5em !important;
+  }
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-title a {
-  font-size: 13px!important;
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a {
   width: 100%!important;
-  display: flex;
+  line-height: inherit!important;
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
   font-weight: var(--body-weight) !important;
   align-items: center;
-  margin-bottom: 0;
-  height: 60px;
+  margin-bottom: 0!important;
   transition: var(--trans) !important;
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-title a:before {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a:before {
   position: absolute;
   opacity: 0;
   margin-left: -10px;
   font-family: var(--inter), var(--body), sans-serif !important;
-  line-height: 0;
   font-weight: 400;
   content: "→";
   transition: var(--trans);
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-container--below-title {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-container--below-title {
   min-width: 30%!important;
   max-width: 30%!important;
   display: block!important;
-  padding: 12px 0;
-  cursor: pointer;
+  padding: unset!important;
   text-align: right!important;
   line-height: 0.5 !important;
   margin-bottom: 0px!important;
 }
 @media screen and (max-width: 767px) {
-  .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-container--below-title {
-    width: 35%!important;
+  .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-container--below-title {
+    min-width: 22%!important;
+    max-width: 22%!important;
   }
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-container--above-title {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-container--above-title {
   display: none!important;
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item {
   font-size: 0.7em;
   text-transform: uppercase;
   text-align: right;
@@ -662,13 +667,13 @@ button[type="submit"]:after,
   font-weight: var(--bold-weight);
 }
 @media screen and (max-width: 767px) {
-  .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item {
-    font-size: 0.55em !important;
+  .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item {
+    font-size: 0.6em !important;
   }
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--cats,
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item.summary-metadata-item--date,
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--tags {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--cats,
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item.summary-metadata-item--date,
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--tags {
   font-family: var(--inter), var(--body), sans-serif !important;
   border-radius: 4px!important;
   background: var(--secondary-color);
@@ -678,33 +683,34 @@ button[type="submit"]:after,
   font-style: normal;
   letter-spacing: 0.07em !important;
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--tags {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--tags {
   color: var(--dark) !important;
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item:after {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item:after {
   display: none!important;
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item a,
-.summary-block-setting-design-list .sqs-gallery-design-list a.blog-item-category,
-.summary-block-setting-design-list .sqs-gallery-design-list .blog-author-name {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item a,
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list a.blog-item-category,
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .blog-author-name {
   pointer-events: none!important;
   cursor: default!important;
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container {
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container {
   display: flex;
   float: unset!important;
   flex-direction: row!important;
+  justify-content: space-between;
   align-items: center;
 }
 @media screen and (min-width: 767px) {
-  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover {
+  .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover {
     /*Title*/
     /*Arrow*/
   }
-  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover .summary-title a {
+  .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover a {
     padding-left: 18px;
   }
-  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover .summary-title a:before {
+  .sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover a:before {
     opacity: 1!important;
     margin-left: -18px;
     transition: opacity 0.3s ease;
