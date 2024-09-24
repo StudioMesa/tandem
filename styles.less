@@ -142,6 +142,12 @@ padding-left: 6px;}}
 
 
 //---MOBILE NAVIGATION---//
+/*Remove underline from active*/
+.header-nav-item--active a, body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-item-content, :is([aria-current="page"], [aria-current="true"]) .header-menu-nav-item-content{
+background-image:none!important;
+text-decoration:none!important;
+background:none!important;}
+
 /*Mobile Nav Wraper*/
 .header-menu-nav-wrapper{
 position:static!important;
