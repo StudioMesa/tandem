@@ -14,8 +14,10 @@ html {
   scroll-padding-top: 10vh!important;
 }
 /*Site Background Color*/
-body {
-  background-color: var(--body-background) !important;
+@media screen and (max-width: 767px) {
+  body {
+    background-color: var(--body-background) !important;
+  }
 }
 * {
   font-feature-settings: var(--inter-features) !important;
