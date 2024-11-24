@@ -1,40 +1,53 @@
-name: Compile LESS to CSS
+name: Compile LESS to CSS (styles)
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'styles.less'  # Trigger only when styles.less changes
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-        name: Check out the repository
+      - name: Check out the repository
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
 
       - name: Install LESS
         run: npm install -g less
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Fetch and reset to remote main
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
       - name: Compile LESS to CSS
         run: lessc styles.less styles.css
 
       - name: Commit and push if changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
           git add styles.css
-          git diff --staged --quiet || git commit -m "Compile LESS to CSS"
-          if [ $? -eq 0 ]; then
-            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/StudioMesa/tandem.git HEAD:main
+          if ! git diff --cached --quiet; then
+            git commit -m "Compile styles.less to styles.css"
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
           else
             echo "No changes to commit."
           fi
