@@ -1133,8 +1133,10 @@ body:not(.sqs-seven-one.sqs-edit-mode-active) {
     padding: 4px 0px!important;
     display: flex;
     flex-direction: column;
-    gap: 1rem!important;
     transition: var(--trans) !important;
+  }
+  body:not(.sqs-seven-one.sqs-edit-mode-active) .header-nav-folder-item {
+    padding: 8px 0px!important;
   }
   body:not(.sqs-seven-one.sqs-edit-mode-active) .header-nav-folder-item a {
     line-height: 1!important;
