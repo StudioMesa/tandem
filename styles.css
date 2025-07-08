@@ -1,4 +1,4 @@
-/* Tandem CSS — Updated 04/18/25 */
+/* Tandem CSS — Updated 07/08/25 */
 /*Borders*/
 html {
   --c-border: 1px solid currentColor;
@@ -1279,31 +1279,5 @@ body:not(.sqs-seven-one.sqs-edit-mode-active) .header-nav-item.header-nav-item--
   100% {
     transform: translateY(0px);
     opacity: 1;
-  }
-}
-/*Mobile*/
-@media screen and (min-width: 850px) {
-  .gallery-masonry[data-width="full"] {
-    padding-top: 0vw!important;
-    pointer-events: none!important;
-  }
-  /*Masonry One Column Mobile*/
-  .gallery-masonry-wrapper.gallery-masonry-list--ready {
-    height: auto!important;
-  }
-  /*Image Wrapper*/
-  figure.gallery-masonry-item {
-    position: relative!important;
-    width: 100%!important;
-    transform: unset!important;
-  }
-  /*Image Padding*/
-  .gallery-masonry-item-wrapper {
-    height: auto!important;
-    padding: var(--sqs-site-gutter) 0px;
-  }
-  /*Span Image Full Width*/
-  .gallery-masonry .gallery-masonry-item[data-loaded] img {
-    width: 100% !important;
   }
 }
