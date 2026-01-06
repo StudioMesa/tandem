@@ -1106,6 +1106,7 @@ body:not(.sqs-seven-one.sqs-edit-mode-active) {
     transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1) !important;
   }
   body:not(.sqs-seven-one.sqs-edit-mode-active) .header-nav-folder-title {
+    padding-top: 0px!important;
     margin-bottom: 8px;
     display: flex!important;
     align-items: center;
