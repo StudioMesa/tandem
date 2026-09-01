@@ -1,4 +1,4 @@
-/* Tandem CSS — Updated 05/22/26 */
+/* Tandem CSS — Updated 09/01/26 */
 /*Borders*/
 html {
   --c-border: 1px solid currentColor;
@@ -1088,7 +1088,8 @@ body:not(.sqs-seven-one.sqs-edit-mode-active) {
     gap: 2rem;
     margin-right: 0!important;
   }
-  body:not(.sqs-seven-one.sqs-edit-mode-active) main .sections:first-child .page-section:first-child {
+  body:not(.sqs-seven-one.sqs-edit-mode-active) main .sections:first-child .page-section:first-child,
+  body:not(.sqs-seven-one.sqs-edit-mode-active) main .page-regions:first-child .region:first-child .page-section:first-child {
     padding-top: 0px!important;
   }
   body:not(.sqs-seven-one.sqs-edit-mode-active) #header {
